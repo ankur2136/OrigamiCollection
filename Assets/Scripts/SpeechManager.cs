@@ -11,13 +11,13 @@ public class SpeechManager : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        keywords.Add("Reset", () =>
+        keywords.Add("Reset world", () =>
         {
             // Call the OnReset method on every descendant object.
             this.BroadcastMessage("OnReset");
         });
 
-        keywords.Add("Rotate", () =>
+        keywords.Add("Drop Sphere", () =>
         {
             var focusObject = GazeGestureManager.Instance.FocusedObject;
             if (focusObject != null)
